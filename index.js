@@ -75,6 +75,9 @@ async function run() {
       }
     })
 
+    // database collection
+    const usersCollection = client.db("meridian-hotel").collection("users");
+
     // Save or modify user email, status in DB
     app.put('/users/:email', async (req, res) => {
       const email = req.params.email
